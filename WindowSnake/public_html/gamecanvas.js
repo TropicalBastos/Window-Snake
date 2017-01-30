@@ -47,10 +47,12 @@ function draw(){
         textFont(menuFont);
         if(width>600){
             textSize(150);
-            text("WindowSnake",(width/2)-200,150);
+            textAlign(CENTER);
+            text("WindowSnake",width/2,150);
         }else{
             textSize(80);
-            text("WindowSnake",(width/2)-100,150);
+            textAlign(CENTER);
+            text("WindowSnake",width/2,150);
         }
         start.printStart(scl);
         noLoop();
@@ -64,10 +66,12 @@ function draw(){
         textFont(menuFont);
         if(width>600){
             textSize(150);
-            text("WindowSnake",(width/2)-200,150);
+            textAlign(CENTER);
+            text("WindowSnake",width/2,150);
         }else{
             textSize(80);
-            text("WindowSnake",(width/2)-100,150);
+            textAlign(CENTER);
+            text("WindowSnake",width/2,150);
         }
         g.printGameOver(scl);
         noLoop();
@@ -86,6 +90,7 @@ function draw(){
     fill(200, 66, 244);
     textFont(menuFont);
     textSize(60);
+    textAlign(LEFT);
     text("Score: "+score,20,height-60);
     
     fill(255,0,100);
