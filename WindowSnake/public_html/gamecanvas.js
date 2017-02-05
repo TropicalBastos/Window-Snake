@@ -21,7 +21,7 @@ function preload(){
 }
 
 function setup(){
-    createCanvas(window.innerWidth,window.innerHeight);
+    createCanvas(window.innerWidth-5,window.innerHeight-5);
     score = 0;
     s = new Snake();
     g = new GameOver();
@@ -34,13 +34,13 @@ function setup(){
     maxScore = Math.round((width/20)*(height/20));
 }
 
-/*Called directly after setup(), the draw() function 
- * continuously executes the lines of code contained inside its block 
+/*Called directly after setup(), the draw() function
+ * continuously executes the lines of code contained inside its block
  * until the program is stopped or noLoop() is called
  */
 function draw(){
     background(0);
-    
+
     //checks for start of game
     if(startGame){
         fill(200, 66, 244);
@@ -76,23 +76,23 @@ function draw(){
         g.printGameOver(scl);
         noLoop();
     }
-    
+
     gameOver = s.update();
     gameOver = s.tailCollided();
     s.show();
-    
+
     if(s.eat(food)){
         pickLocation();
         eatSound.play();
         score++;
     }
-    
+
     fill(200, 66, 244);
     textFont(menuFont);
     textSize(60);
     textAlign(LEFT);
     text("Score: "+score,20,height-60);
-    
+
     fill(255,0,100);
     rect(food.x,food.y,scl,scl);
 }
@@ -100,7 +100,7 @@ function draw(){
 function pickLocation(){
     var cols = floor(width/scl);
     var rows = floor(height/scl);
-    
+
     //vector to store x and y
     food = createVector(floor(random(cols)),floor(random(rows)));
     food.mult(scl);
@@ -128,4 +128,9 @@ function keyPressed(){
         startGame = false;
         loop();
     }
+}
+
+function windowResized(){
+  setup();
+  loop();
 }

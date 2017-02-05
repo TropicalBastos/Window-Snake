@@ -1,10 +1,10 @@
 function GameOver(){
-    
+
     this.printGameOver = function(scl){
         fill(255);
         textFont(pressFont);
         textStyle(BOLD);
-        if(width>600){
+        if(width>720){
             textSize(20);
             textAlign(CENTER);
             text("Game Over, press enter to retry",width/2,height/2);
@@ -18,11 +18,11 @@ function GameOver(){
             text("Max score for this window size: "+maxScore,width/2,height/2+200);
             }
     };
-      
+
 }
 
 function StartGame(){
-    
+
     this.printStart = function(scl){
         fill(255);
         textFont(pressFont);
@@ -37,5 +37,5 @@ function StartGame(){
         text("Press enter to begin!",width/2,height/2);
     }
     };
-      
+
 }
