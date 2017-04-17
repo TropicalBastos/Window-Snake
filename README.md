@@ -1,6 +1,7 @@
 # Window-Snake
 
-A responsive Javascript browser snake game that uses the size of the window for the in game map
+A responsive Javascript browser snake game that uses the size of the window for the in game map.
+Simply run it in the browser and you're good to go! Uses the p5js javascript canvas plugin that is based on Processing
 
 <br><br>
 #### A screenshot of the start state:
